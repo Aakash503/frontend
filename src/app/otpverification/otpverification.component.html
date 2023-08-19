@@ -1,0 +1,74 @@
+
+<!-- <div class="container">
+    <div class="loginPage">
+        <div class="top"></div>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <h3 style="margin-top: 50px;">Please enter OTP to verify your email</h3>
+            <mat-form-field id="formfield" appearance="outline" style="margin-left: 50px; margin-top: 10px;"><div class="s">
+                <i class="fas fa-key fa-lg me-3 fa-fw"></i> </div> 
+                <input matInput name="otp" formControlName="otp"
+                    >
+                <mat-error *ngIf="otp?.hasError('required')">
+                    otp is required.
+                </mat-error>
+                <mat-error *ngIf="otp?.errors?.['minlength']">
+                    Please enter correct otp.
+                </mat-error>
+            </mat-form-field>
+           
+            <br>
+            <div>
+                <button mat-raised-button type="submit" [disabled]="!profileForm.valid"
+                    style="margin-left: 120px; background-color:#092745">Enter</button>
+                  
+            </div>
+            <br><br>
+            
+        </form>
+        <div class="footer"></div>
+    </div>
+</div>
+
+ -->
+
+
+
+
+
+
+ <div class="container">
+    <div class="loginPage">
+        <div class="top"></div>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <h3 style="margin-top: 50px;">Please enter OTP to verify your email</h3>
+
+            <div class="s">
+                <i class="fas fa-key fa-lg me-3 fa-fw"></i> </div> 
+            <mat-form-field id="formfield" appearance="outline" style="margin-left: 50px; margin-top: 10px;">
+                <input matInput type="number" placeholder="Enter the sent otp" name="otp" formControlName="otp"
+                    >
+                <mat-error *ngIf="otp?.hasError('required')">
+                    otp is required.
+                </mat-error>
+                <!-- <mat-error *ngIf="email?.hasError('email')">
+                    Email valid email address.
+                </mat-error> -->
+            </mat-form-field>
+           
+            <br>
+            <div>
+                <button mat-raised-button type="submit" [disabled]="!profileForm.valid"
+                    style="margin-left: 120px; background-color:#092745">Enter</button>
+                  
+            </div>
+            <br><br>
+            
+        </form>
+
+        <!-- <h1>{{data}}</h1> -->
+        <div class="footer"></div>
+    </div>
+</div>
+
+
+

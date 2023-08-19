@@ -1,0 +1,59 @@
+<div class="back">
+    <div class="container">
+        <div id="infoCard">
+            <div  class="bk">
+                <span class="material-icons" routerLink="/home"> arrow_circle_left </span></div>
+            <div class="row" style="margin-top: 75px; margin-bottom: 75px; margin-left: 40px;" >
+                <div class="col">
+                    <mat-card class="example-card movie-img">
+                        <img mat-card-image
+                            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2{{selectedMovieData.poster_path}}">
+                    </mat-card>
+                </div>
+            </div>
+            <div class="col content">
+                <mat-card class="cardContent">
+                    <!-- movie-title -->
+                    <div class="info">
+                        <div class="movie-title">
+                            {{selectedMovieData.original_title}}
+                            <button mat-raised-button
+        aria-label="Button that displays a tooltip that has custom delays through a default config">
+  Add to favorite
+</button>
+                            <a mat-button style="color: rgb(235, 9, 9);" matTooltip="Add Favorite Movie"
+                        (click)="addToFavourite(selectedMovieData)">
+                        <mat-icon>favorite</mat-icon></a>
+                        </div>
+                    </div><br>
+                       <!-- Rating -->
+                    <div class="movie-detail">
+                        <label>Rating</label>
+                        <span>{{selectedMovieData.vote_average}}</span>
+                    </div><br>
+                        <!-- release_date -->
+                    <div class="movie-detail">
+                        <label>Release Date</label>
+                        <span>{{selectedMovieData.release_date}}</span>
+                    </div><br>
+                    <!-- overview -->
+                    <div class="movie-description">
+                        {{selectedMovieData.overview}}
+                    </div><br>
+                   <!-- recommendation-button -->
+                    <a routerLink="/recommended"
+                        (click)="passRecommended(selectedMovieData.original_title)" 
+                        >
+                        <button>Recommend</button>
+                    </a>  
+                    <br><br>
+                    <!-- play button -->
+                    <div>
+                    <button (click)="openDialog()">watch trailer</button></div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,41 @@
+<body>
+    <div class="main">
+    <!-- search method -->
+    <div  class="back">
+    <span class="material-icons" routerLink=""> arrow_circle_left </span></div>
+ <div class="as">
+    <div class="input-group rounded">
+        <input type="search" placeholder="Search Movie" class="form-control rounded"aria-label="Search"
+            aria-describedby="search-addon" #searchitem />
+        <span class="input-group-text border-0" id="search-addon" (click)="searchRequiredMovie(searchitem.value)">
+            <i class="fas fa-search search-icon" matToolTip="Search"></i>
+        </span>
+        <!-- <i class="fa-solid fa-rotate-right reset" matToolTip="Rest" (click)="reset()"></i> -->
+    </div>
+    <!-- <h1 class="head">MOVIES</h1> -->
+ </div>
+    <div id="movieContainer">
+        <div class="card" *ngFor="let data of allMovies">
+            
+            <img src="https://image.tmdb.org/t/p/w300/{{data.poster_path }}">
+            <div class="descriptions">
+                <h1>{{data.original_title}}</h1>
+                <br>
+                <p>Release Date: {{data.release_date}}</p>
+                <p>Movie Rating: {{data.vote_average}}</p>
+                <button (click)="movieDetails(data)">
+                    Movie info
+                </button>
+            </div>
+        </div>
+    </div>
+    <div style="margin:auto; padding-left: 500px;">
+        <button [disabled]="currentPg<=1" (click)="decreasePage()" mat-raised-button>
+            <mat-icon>navigate_before</mat-icon>Previous 
+        </button>
+
+        <button class="a" [disabled]="currentPg>=33349" (click)="increasePage()" mat-raised-button>Next
+            <mat-icon>navigate_next</mat-icon> </button>
+    </div>
+</div>
+</body>

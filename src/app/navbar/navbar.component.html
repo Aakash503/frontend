@@ -1,0 +1,64 @@
+<body>
+<div class="menu_bar">
+  <img src="https://media.istockphoto.com/id/1273839388/vector/letter-f-icon.jpg?s=612x612&w=0&k=20&c=P5FbythpuhFMNHsvQhMNZ9dWtNipD3oKSOADV-EdrOY=" alt="f img" width="50px" height="40px">
+  <h1 class="logo"><a routerLink="" style="text-decoration: initial;  text-shadow: 3px 3px 4px; color: rgb(255, 255, 255)"><i>MOVIE<span>FLIX</span></i></a></h1>
+  <ul>
+    <li class="dc"><a routerLink="home">Movies</a></li>
+    <li class="dc"><a routerLink="favourite">FavouriteMovie</a></li>
+ <li *ngIf="!isLoggedIn"><a><i class="fa-regular fa-user"></i><i class="fas fa-caret-down"></i></a>
+  <div class="dropdown_menu">
+    <ul>
+      <li *ngIf="!isLoggedIn"><a routerLink="/login">Sign-in</a></li>
+    </ul>
+  </div>
+  <li *ngIf="isLoggedIn">
+    <a>Settings<i class="fas fa-caret-down"></i></a>
+      <div class="dropdown_menu">
+        <ul>
+          <li *ngIf="isLoggedIn"><a (click)="logout()">Log Out</a></li><hr>
+          <li *ngIf="isLoggedIn"><a routerLink="/dashboard">Profile</a></li>
+        </ul>
+      </div>
+  </li> 
+  </ul>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

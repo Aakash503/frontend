@@ -1,0 +1,68 @@
+form {
+  padding: 999px;
+  margin: 50px 50px 0px 0px;
+  position: relative;
+  width: 420px;
+  height: 450px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: rgb(249, 250, 252);
+  background-color: #152733;
+  text-decoration:black;
+  opacity: 0.9;
+  margin-right: 490px;
+  border: solid white 3px;
+  margin-top: 90px;
+}
+.signup{
+  margin-left: 30px;
+}
+.aa{
+  margin-left: 50px;
+  color: aliceblue;
+}
+#q{
+  color: aliceblue;
+}
+.s{
+  color: aliceblue;
+  margin-left: 50px;
+}
+
+h3 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loginPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background-position: 100%;
+  margin: 0px;
+  min-height: 70%;
+  color: black;
+  font-size:larger;
+}
+
+.footer {
+  padding-top: 10px;
+}
+
+.top {
+  padding-top: 10px;
+}
+
+.container {
+  height: 650px;
+  background-color: #152733;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
